@@ -1,0 +1,10 @@
+name: Invoker
+version: 1.0 (1.7.2+)
+description: A magical plugin kindasorta like Dota's Invoker system.
+author: hatten33
+ 
+main: net.aerenserve.hackathon.Invoker
+
+commands:
+  invoke:
+    description: Shows a list of recipes for invoking different spells
