@@ -20,6 +20,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
+import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.player.PlayerDropItemEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerItemHeldEvent;
@@ -75,7 +76,14 @@ public class Listeners implements Listener {
 		if(slot == 5 || slot == 6 || slot == 7) {
 			e.setCancelled(true);
 		}
-		
+	}
+	
+	@EventHandler
+	public void inventoryClick(InventoryClickEvent e) {
+		int slot = e.getSlot();
+		if(slot == 0 || slot == 1 || slot == 2 || slot == 3 || slot == 5 || slot == 6 || slot == 7) {
+			e.setCancelled(true);
+		}
 	}
 	
 	private Integer moveEssence(Player p, int fromSlot) {
